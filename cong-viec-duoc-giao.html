@@ -77,6 +77,7 @@
         <div class="card p-4">
             <p><strong>Họ và tên:</strong> <span id="userNameDisplay"></span></p>
             <p><strong>Công việc được giao:</strong> <span id="userWorkDisplay"></span></p>
+            <p><strong>Hạn chót hoàn thành:</strong> <span id="userExpireDateDisplay"></span></p>
           <p><strong>Trạng thái công việc: </strong> <span id="userStatusDisplay"></span></p>
         </div>
     </div>
@@ -93,6 +94,7 @@
                 document.getElementById('userNameDisplay').textContent = currentUser.name;
                 document.getElementById('userWorkDisplay').textContent = currentUser.work;
               document.getElementById('userStatusDisplay').textContent = currentUser.status;
+                document.getElementById('userExpireDateDisplay').textContent = currentUser.expiredate;
                 
                 const welcomeMessageEl = document.getElementById('welcomeMessage');
                 if (welcomeMessageEl) {
