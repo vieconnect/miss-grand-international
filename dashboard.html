@@ -51,35 +51,6 @@
 <body>
     
     <script src="auth.js"></script>
-     <nav class="navbar navbar-expand sticky-top bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html">VieConnect</a>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../index.html">Trang chủ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/tin-tuc-su-kien">Tin tức & Sự kiện</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../tra-cuu-thi-sinh">Tra cứu thí sinh</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../ve-chung-toi">Về chúng tôi</a>
-                    </li>
-                </ul>
-                <span class="navbar-text me-3" id="welcomeMessage">
-                </span>
-                
-            </div>
-        </div>
-    </nav>
  <nav class="navbar navbar-expand sticky-top bg-body-tertiary">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -89,12 +60,14 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="../dashboard.html">Thông tin cá nhân</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="../cong-viec-duoc-giao.html">Công việc được giao</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../dashboard.html">Thông tin cá nhân</a>
+                    </li>
                 </ul>
+                <span class="navbar-text me-3" id="welcomeMessage">
+                <button class="btn btn-outline-danger" id="logoutButton">Đăng xuất</button>
                 <span class="navbar-text me-3" id="welcomeMessage">
                 </span>
                 
@@ -111,7 +84,6 @@
             <p><strong>Ngày sinh:</strong> <span id="userBirthdayDisplay"></span></p>
             <p><strong>Chức vụ:</strong> <span id="userClassDisplay"></span></p>
             <center style="color:red ;">(Nếu thí sinh phát hiện thông tin cá nhân bị sai, vui lòng liên hệ với Giám đốc qua SĐT: 0988065911)</center><br>
-            <button class="btn btn-outline-danger" id="logoutButton">Đăng xuất</button>
         </div>
     </div>
     
