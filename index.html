@@ -263,6 +263,49 @@
       src="../assets/dist/js/bootstrap.bundle.min.js"
       class="astro-vvvwv3sm"
     ></script>
-    
+     <div class="modal fade" id="lockAccountModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow">
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title fw-bold">⚠️ ĐĂNG NHẬP BỊ HẠN CHẾ</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4">
+                <p class="text-center text-muted mb-4">Hệ thống ghi nhận vi phạm và đã tạm dừng quyền truy cập của tài khoản này.</p>
+                
+                <div class="table-responsive">
+                    <table class="table table-sm table-borderless">
+                        <tbody>
+                            <tr>
+                                <th class="text-secondary" style="width: 40%;">ID:</th>
+                                <td id="displayLockID" class="fw-bold text-dark">---</td>
+                            </tr>
+                            <tr>
+                                <th class="text-secondary">Lý do:</th>
+                                <td id="displayLockReason" class="text-danger">---</td>
+                            </tr>
+                            <tr>
+                                <th class="text-secondary">Bắt đầu:</th>
+                                <td id="displayLockStart">---</td>
+                            </tr>
+                            <tr>
+                                <th class="text-secondary">Thời gian hạn chế:</th>
+                                <td id="displayLockDuration" class="fw-bold">---</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="alert alert-light border mt-3 small">
+                    Mọi thắc mắc vui lòng liên hệ bộ phận hỗ trợ VieConnect để được giải quyết<br>
+                    <a href="/dieu-khoan-su-dung.html" target="_blank">Xem điều khoản sử dụng của VieConnect</a>
+                </div>
+            </div>
+            <div class="modal-footer border-0">
+                <button type="button" class="btn btn-secondary w-100" data-bs-dismiss="modal" style="border-radius: 50px;">Đã hiểu</button>
+            </div>
+        </div>
+    </div>
+</div>
   </body>
 </html>
