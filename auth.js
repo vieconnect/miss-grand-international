@@ -8,7 +8,7 @@ const users = {
         work: 'Tự soạn một bài thuyết trình về bản tin các quốc gia sau đó quay video gửi qua email Giám đốc', 
         status: 'Chưa hoàn thành', 
         expiredate: '8h00 tối, ngày 10/2/2026',
-         isLocked: true,
+         isLocked: false,
         // Thông tin chi tiết về việc khóa
         lockInfo: {
             id: "LOCK-2025-001",
