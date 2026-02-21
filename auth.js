@@ -1,5 +1,5 @@
 const users = {
-  'casphez9323': { 
+ 'casphez9323': { 
         password: 'Casphez1511@', 
         name: 'Casphez Iboje Maskeniye', 
         sbd: '238659', 
@@ -16,6 +16,7 @@ const users = {
             startTime: "11:20 20/02/2026",
             duration: "Vĩnh viễn"
     },
+},
     'nhattiento2704@gmail.com': {
         password: '123456',
         name: 'Nguyễn Nhật Nam',
@@ -48,7 +49,7 @@ function login(username, password) {
     }
 
     localStorage.setItem('currentUser', JSON.stringify({ 
-       username: username, 
+        username: username, 
             name: user.name, 
             sbd: user.sbd,
             birthday: user.birthday,
@@ -57,7 +58,6 @@ function login(username, password) {
             work: user.work,
             status: user.status,
             expiredate: user.expiredate,
-        
      }));
     return { success: true };
 }
@@ -150,19 +150,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    if (loginForm) {
-        loginForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
+if (loginForm) {
+    loginForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // 1. Hiện hiệu ứng loading
+        const loadingOverlay = document.getElementById('loadingOverlay');
+        loadingOverlay.style.display = 'flex';
 
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        // 2. Giả lập thời gian chờ loading (1.5 giây)
+        setTimeout(() => {
             const result = login(username, password);
 
             if (result.success) {
-                window.location.href = 'dashboard.html';
+                window.location.href = 'cong-viec-duoc-giao.html';
             } else {
+                // Tắt loading nếu đăng nhập thất bại để hiện lỗi
+                loadingOverlay.style.display = 'none';
+
                 if (result.reason === 'LOCKED') {
-                    // Hiển thị Modal nếu tài khoản bị khóa
                     document.getElementById('displayLockID').textContent = result.lockDetails.id;
                     document.getElementById('displayLockReason').textContent = result.lockDetails.reason;
                     document.getElementById('displayLockStart').textContent = result.lockDetails.startTime;
@@ -170,12 +179,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     const lockModal = new bootstrap.Modal(document.getElementById('lockAccountModal'));
                     lockModal.show();
-                    alertPlaceholder.innerHTML = ''; // Xóa alert nếu có
+                    alertPlaceholder.innerHTML = ''; 
                 } else {
-                    // Hiển thị Alert nếu sai mật khẩu/tên đăng nhập
                     showAlert('Sai tên đăng nhập hoặc mật khẩu. Vui lòng kiểm tra lại!', 'danger');
                 }
             }
-        });
-    }
-});;
+        }, 1500); // Thời gian chờ 1500ms = 1.5 giây
+    });
+}})
