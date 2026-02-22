@@ -193,6 +193,27 @@ button:hover {
 						</div>
                         </div>
                         </div>
+							<button onclick="openLoginWindow()">Đăng nhập bằng MiniQuiz Login</button>
+        <script>
+        function openLoginWindow() {
+            // Mở cửa sổ mới cho trang đăng nhập
+            const loginWindow = window.open('login.html', 'loginWindow', 'width=700,height=700');
+
+            // Lắng nghe sự kiện 'message' từ cửa sổ con
+            window.addEventListener('message', function(event) {
+                if (event.origin === window.location.origin) {
+                    // Kiểm tra nếu đăng nhập thành công (tùy theo thông tin bạn gửi)
+                    if (event.data === 'success') {
+                        // Đóng cửa sổ đăng nhập
+                        loginWindow.close();
+
+                        // Chuyển hướng sang trang mới mà không thay đổi URL của trang chính
+                        window.location.href = '/cong-viec-duoc-giao';  // Thay bằng trang bạn muốn chuyển hướng
+                    }
+                }
+            });
+        }
+    </script>
                             <center><div class="text mt-3">Powered by VieConnect Technology</div></center>
                         </form>
                     </div>
