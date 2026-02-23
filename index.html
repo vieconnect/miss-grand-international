@@ -9,13 +9,24 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
         <style>
-        body {
-            background: url("https://colorlib.com/etc/lf/Login_v4/images/bg-01.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
+        }
+			body {
+    background: url("https://colorlib.com/etc/lf/Login_v4/images/bg-01.jpg") no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
-        }
+    display: flex;
+    align-items: center; /* Căn giữa dọc */
+    justify-content: center; /* Căn giữa ngang */
+    min-height: 100vh; /* Chiều cao toàn màn hình */
+    margin: 0;
+}
+
+/* Xóa bỏ margin-top (mt-5) mặc định của Bootstrap để căn giữa tuyệt đối */
+.container.center-form {
+    margin-top: 0 !important;
+}
         .container-login100-form-btn {
   display: -webkit-box;
   display: -webkit-flex;
