@@ -83,7 +83,23 @@
             <center style="color:red ;">(Nếu thí sinh phát hiện thông tin cá nhân bị sai, vui lòng liên hệ với Giám đốc qua SĐT: 0988065911)</center><br>
         </div>
     </div>
-    
+    <script src="auth.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Chạy hàm cập nhật giao diện từ auth.js
+            updateDashboardUI(); 
+
+            // 2. Gán sự kiện cho nút Đăng xuất
+            const logoutBtn = document.getElementById('logoutButton');
+            if (logoutBtn) {
+                logoutBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    logout(); // Gọi hàm logout trong auth.js
+                });
+            }
+        });
+    </script>
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
             updateExamRoomUI(); 
