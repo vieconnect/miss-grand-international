@@ -1,13 +1,21 @@
 const users = {
-    'casphez9323': { 
-        password: 'Casphez1511@', 
+    'missgrand-venezuela': { 
+        password: 'missgrand-venezuela', 
         name: 'Casphez Iboje Maskeniye', 
         sbd: '238659', 
         birthday: '15/11/2015', 
-        class: 'Biên tập viên', 
-        work: 'Tự soạn một bài thuyết trình về bản tin các quốc gia sau đó quay video gửi qua email Giám đốc', 
-        status: 'Chưa hoàn thành', 
-        expiredate: '8h00 tối, ngày 10/2/2026',
+        class: 'Hoa hậu Venezuela',    stt1: '1', 
+        subject1:'Miss Grand International 2026', 
+        round1: 'Vòng loại', 
+        time1: '13/2/2025 11:52', 
+        examStatus1: 'Đã hoàn thành',
+        result1: 'Được vào vòng Chung kết',
+         stt2: '2', 
+        subject2:'Miss Grand International 2026', 
+        round2: 'Vòng Chung kết', 
+        time2: '15/2/2025 20:09', 
+        examStatus2: 'Đã hoàn thành',
+        result2: 'Lọt vào danh sách Top 5 of Miss Grand International 2026',
         isLocked: false,
         // Thông tin chi tiết về việc khóa
         lockInfo: {
@@ -59,9 +67,19 @@ function login(username, password) {
         birthday: user.birthday,
         class: user.class,
         school: user.school,
-        work: user.work,
-        status: user.status,
-        expiredate: user.expiredate,
+        room: user.room,
+        stt1: user.stt1,
+        subject1: user.subject1,
+        time1: user.time1,
+        round1: user.round1,
+        examStatus1: user.examStatus1,
+        result1: user.result1,
+        stt2: user.stt2,
+        subject2: user.subject2,
+        time2: user.time2,
+        round2: user.round2,
+        examStatus2: user.examStatus2,
+        result2: user.result2
     }));
     return { success: true };
 }
@@ -188,7 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (result.success) {
                     localStorage.setItem('loginAttempts', '0'); // Reset nếu đúng
-                    window.location.href = 'cong-viec-duoc-giao.html';
+                    window.location.href = 'ket-qua-ki-thi.html';
                 } else {
                     loadingOverlay.style.display = 'none';
 
