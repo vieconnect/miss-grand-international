@@ -1,6 +1,6 @@
 const users = {
     'missgrand-venezuela': { 
-        password: 'missgrand-venezuela', 
+        password: 'missgrandvenezuela', 
         name: 'Casphez Iboje Maskeniye', 
         sbd: '238659', 
         birthday: '15/11/2015', 
